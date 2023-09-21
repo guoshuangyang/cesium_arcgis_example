@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+          // 如果sw是相对路径，那么修改成绝对路径
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(() => {
+              console.log("Service worker registered!")
+            })
+            .catch((error) => {
+              console.warn("Error registering service worker:")
+              console.warn(error)
+            })
+        }
+      })
+    </script>
+  </body>
+</html>

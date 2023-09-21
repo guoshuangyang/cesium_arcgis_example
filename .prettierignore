@@ -1,0 +1,8 @@
+*.json
+
+public/
+dist/
+
+# modles
+*.fbx
+*.gltf
