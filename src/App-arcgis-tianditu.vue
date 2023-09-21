@@ -3,11 +3,10 @@ import { onMounted } from "vue"
 import Map from "@arcgis/core/Map"
 import MapView from "@arcgis/core/views/MapView"
 import WebTileLayer from "@arcgis/core/layers/WebTileLayer"
+import { tiandimapkey } from "@/config"
 
 const titleLayer = new WebTileLayer({
-  urlTemplate: `//{subDomain}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=${
-    import.meta.env.VITE_mapkey
-  }`,
+  urlTemplate: `//{subDomain}.tianditu.gov.cn/img_w/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&tk=${tiandimapkey}`,
   subDomains: ["t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7"]
 })
 // 创建一个地图并设置天地图作为底图
