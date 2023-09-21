@@ -38,7 +38,7 @@ onMounted(() => {
   // 叠加天地图
   viewer.imageryLayers.addImageryProvider(
     new WebMapTileServiceImageryProvider({
-      url: `http://t0.tianditu.gov.cn/img_w/wmts?tk=${tiandimapkey}&SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={TileMatrix}&TILEROW={TileRow}&TILECOL={TileCol}`,
+      url: `//t0.tianditu.gov.cn/img_w/wmts?tk=${tiandimapkey}&SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=img&STYLE=default&TILEMATRIXSET=w&FORMAT=tiles&TILEMATRIX={TileMatrix}&TILEROW={TileRow}&TILECOL={TileCol}`,
       layer: "tdtBasicLayer",
       style: "default",
       format: "image/jpeg",
