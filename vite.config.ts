@@ -22,6 +22,7 @@ if (isProduction) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/cesium_arcgis_example/",
   plugins: pluginArr,
   server: {
     host: "0.0.0.0",
